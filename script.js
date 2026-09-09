@@ -282,15 +282,33 @@ if (document.querySelector('.quote-section')) {
 
 /* ─── Expertise — marquee animation ─── */
 const marquees = document.querySelectorAll('[data-marquee]');
-marquees.forEach((track) => {
+marquees.forEach((track, index) => {
     const totalWidth = track.scrollWidth / 2;
     if (totalWidth > 0) {
-        gsap.to(track, {
-            x: -totalWidth,
-            duration: 30,
-            ease: 'none',
-            repeat: -1,
-        });
+        const isReverse = track.dataset.direction === 'reverse' || track.classList.contains('duplicate') || (index % 2 === 1);
+        if (isReverse) {
+            // Bottom row: Left to Right
+            gsap.fromTo(track,
+                { x: -totalWidth },
+                {
+                    x: 0,
+                    duration: 30,
+                    ease: 'none',
+                    repeat: -1,
+                }
+            );
+        } else {
+            // Top row: Right to Left
+            gsap.fromTo(track,
+                { x: 0 },
+                {
+                    x: -totalWidth,
+                    duration: 30,
+                    ease: 'none',
+                    repeat: -1,
+                }
+            );
+        }
     }
 });
 
@@ -451,4 +469,39 @@ if (prefersReducedMotion) {
         el.style.transform = 'none';
     });
     if (timelineLineFill) timelineLineFill.style.height = '100%';
+}
+
+/* ─── Mobile Hamburger Toggle ─── */
+const hamburgerBtn = document.getElementById('hamburger-toggle');
+const mobileDrawer = document.getElementById('mobile-drawer');
+const topnav = document.querySelector('.topnav');
+
+if (hamburgerBtn && mobileDrawer) {
+    hamburgerBtn.addEventListener('click', () => {
+        hamburgerBtn.classList.toggle('active');
+        mobileDrawer.classList.toggle('active');
+        if (topnav) topnav.classList.toggle('drawer-open');
+        document.body.classList.toggle('no-scroll');
+    });
+
+    mobileDrawer.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            hamburgerBtn.classList.remove('active');
+            mobileDrawer.classList.remove('active');
+            if (topnav) topnav.classList.remove('drawer-open');
+            document.body.classList.remove('no-scroll');
+        });
+    });
+}
+
+/* ─── Back to Top Button ─── */
+const backToTopBtn = document.getElementById('back-to-top');
+if (backToTopBtn) {
+    backToTopBtn.addEventListener('click', () => {
+        if (typeof lenis !== 'undefined' && lenis && typeof lenis.scrollTo === 'function') {
+            lenis.scrollTo(0, { duration: 1.2 });
+        } else {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    });
 }

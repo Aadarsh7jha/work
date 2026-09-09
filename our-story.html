@@ -14,21 +14,56 @@
   <header class="topnav" data-od-id="topnav">
     <div class="container topnav-inner">
       <a href="index.html" class="logo">
-        <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M14 2L3 8v12l11 6 11-6V8L14 2z" stroke="currentColor" stroke-width="1.5" fill="none" />
-          <path d="M14 8l-6 3.5v7L14 22l6-3.5v-7L14 8z" stroke="currentColor" stroke-width="1.2" fill="none" />
-          <circle cx="14" cy="14" r="2" fill="currentColor" />
-        </svg>
-        ADVENT SECURITY
+        <img src="logo.webp" alt="Advent Security — Excellence in Security" class="logo-img">
       </a>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="index.html">About</a>
-        <a href="#cta">Services</a>
-        <a href="#" class="active">Our Story</a>
+      <nav class="desktop-nav">
+        <div class="nav-item has-dropdown">
+          <a href="index.html">
+            About
+            <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 9l6 6 6-6" />
+            </svg>
+          </a>
+          <div class="dropdown-menu">
+            <a href="our-story.html" class="dropdown-item active">Our Story</a>
+            <a href="index.html#who-we-are" class="dropdown-item">Who We Are</a>
+          </div>
+        </div>
+        <a href="our-story.html" class="active">The Advent Group</a>
+        <a href="index.html#expertise">Security Services</a>
+        <a href="index.html#expertise">Electronic Security</a>
+        <a href="index.html#expertise">Industries</a>
+        <a href="index.html#expertise">Resources</a>
         <a href="#cta">Contact</a>
       </nav>
-      <a href="#cta" class="btn-nav">Get a Quote</a>
+      <div class="topnav-actions">
+        <a href="#cta" class="btn-nav">Request a Quote</a>
+        <button class="hamburger-btn" id="hamburger-toggle" aria-label="Toggle menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-nav-drawer" id="mobile-drawer">
+      <div class="mobile-nav-content">
+        <nav class="mobile-nav-links">
+          <a href="index.html">About</a>
+          <a href="our-story.html" class="mobile-sublink active">↳ Our Story</a>
+          <a href="our-story.html" class="active">The Advent Group</a>
+          <a href="index.html#expertise">Security Services</a>
+          <a href="index.html#expertise">Electronic Security</a>
+          <a href="index.html#expertise">Industries</a>
+          <a href="index.html#expertise">Resources</a>
+          <a href="#cta">Contact</a>
+        </nav>
+        <div class="mobile-nav-cta">
+          <a href="#cta" class="btn-nav">Request a Quote</a>
+        </div>
+      </div>
     </div>
   </header>
 
@@ -44,7 +79,7 @@
           <div class="hero-eyebrow-line"></div>
           <span class="eyebrow-accent">36+ Years of Advent</span>
         </div>
-       
+
         <h1 class="hero-title">
           <span class="line"><span class="line-inner">Our Story</span></span>
         </h1>
@@ -84,24 +119,25 @@
             <div class="timeline-dot"></div>
           </div>
           <div class="timeline-node-content">
-            <img src="s1.jpg" alt="" class="s1">
+            <img src="from-humble-beginnings.jpg" alt="" class="s1">
           </div>
         </div>
 
         <!-- Node 2 — Growth -->
         <div class="timeline-node" data-od-id="timeline-growth">
           <div class="timeline-node-content">
-            <img src="s2.jpg" alt="" class="s1">
+            <img src="growing-our-capability.jpg" alt="" class="s1">
           </div>
           <div class="timeline-node-dot">
             <div class="timeline-dot"></div>
           </div>
           <div class="timeline-node-content">
             <div class="timeline-year">02</div>
-            <h3 class="timeline-beat-title">From Humble Beginnings</h3>
-            <p class="timeline-beat-text">Advent Security was founded in 1990. Its first client was Coles in Bourke
-              Street, Melbourne. In the early years, the business was built around a simple focus: understand the
-              client’s needs, provide capable people and deliver security support clients could rely on.</p>
+            <h3 class="timeline-beat-title">Growing Our Capability</h3>
+            <p class="timeline-beat-text">As the business grew, so did the security requirements of its clients.
+              Advent’s journey expanded from traditional guarding into electronic security, CCTV and surveillance,
+              access control, alarm monitoring, security consulting and risk management. This evolution reflected
+              broader changes in how organisations manage security.</p>
           </div>
         </div>
 
@@ -110,38 +146,21 @@
           <div class="timeline-node-content">
             <div class="timeline-year">03</div>
             <!-- <p class="timeline-beat-label">Built by People and Partnerships</p> -->
-            <h3 class="timeline-beat-title">Growing Our Capability</h3>
-            <p class="timeline-beat-text">As the business grew, so did the security requirements of its clients.
-              Advent’s journey expanded from traditional guarding into electronic security, CCTV and surveillance,
-              access control, alarm monitoring, security consulting and risk management. This evolution reflected
-              broader changes in how organisations manage security.</p>
-          </div>
-          <div class="timeline-node-dot">
-            <div class="timeline-dot"></div>
-          </div>
-          <div class="timeline-node-content">
-            <img src="s3.jpg" alt="" class="s1">
-          </div>
-        </div>
-
-        <!-- Node 4 — Future -->
-        <div class="timeline-node" data-od-id="timeline-future">
-          <div class="timeline-node-content">
-            <img src="s4.jpeg" alt="" class="s1">
-          </div>
-          <div class="timeline-node-dot">
-            <div class="timeline-dot"></div>
-          </div>
-          <div class="timeline-node-content">
-            <div class="timeline-year">04</div>
-            <!-- <p class="timeline-beat-label">Looking Ahead</p> -->
             <h3 class="timeline-beat-title">Built by People and Partnerships</h3>
             <p class="timeline-beat-text">Advent’s growth has been shaped by the clients who placed their trust in the
               business and the people who represented the Advent name. Long-term relationships, professionalism,
               communication and dependable service have remained important throughout the company’s development as a
               family-owned Australian business.</p>
           </div>
+          <div class="timeline-node-dot">
+            <div class="timeline-dot"></div>
+          </div>
+          <div class="timeline-node-content">
+            <img src="built-by-people-and-partnerships.jpg" alt="" class="s1">
+          </div>
         </div>
+
+
 
       </div>
     </section>
@@ -174,10 +193,134 @@
 
   </main>
 
-  <footer class="pagefoot" data-od-id="footer">
-    <div class="container pagefoot-inner">
-      <span>© 2026 Advent Security · All rights reserved</span>
-      <span>Integrated Security Solutions · Melbourne, Australia</span>
+  <!-- Footer (Thurro Style Layout) -->
+  <footer class="site-footer" data-od-id="footer">
+    <div class="container footer-container">
+      <div class="footer-grid">
+        <!-- Brand / Contact Column -->
+        <div class="footer-brand-col">
+          <a href="index.html" class="footer-logo-link">
+            <img src="logo.webp" alt="Advent Security" class="footer-logo-img">
+          </a>
+          <div class="footer-contact-info">
+            <p class="contact-item email"><a
+                href="mailto:contact@adventsecurity.com.au">contact@adventsecurity.com.au</a></p>
+            <p class="contact-item address">Operations Centre: 24/7 365 Days<br>Melbourne, Victoria, Australia</p>
+            <p class="contact-item phone"><a href="tel:1800464166">1800 464 166</a></p>
+          </div>
+          <div class="footer-socials">
+            <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn" class="social-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                <rect x="2" y="9" width="4" height="12" />
+                <circle cx="4" cy="4" r="2" />
+              </svg>
+            </a>
+            <a href="https://facebook.com" target="_blank" aria-label="Facebook" class="social-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+              </svg>
+            </a>
+            <a href="https://instagram.com" target="_blank" aria-label="Instagram" class="social-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Links Grid Columns -->
+        <div class="footer-nav-cols">
+          <!-- Col 1 -->
+          <div class="footer-col">
+            <h4 class="footer-col-title">THE ADVENT GROUP</h4>
+            <ul class="footer-links">
+              <li><a href="index.html">About Advent</a></li>
+              <li><a href="our-story.html">Our Businesses</a></li>
+              <li><a href="index.html#who-we-are">Our Partners</a></li>
+              <li><a href="index.html#cta">Careers</a></li>
+              <li><a href="our-story.html">Leadership Team</a></li>
+            </ul>
+          </div>
+
+          <!-- Col 2 -->
+          <div class="footer-col">
+            <h4 class="footer-col-title">SECURITY SERVICES</h4>
+            <ul class="footer-links">
+              <li><a href="index.html#expertise">Security Guard</a></li>
+              <li><a href="index.html#expertise">Corporate Concierge</a></li>
+              <li><a href="index.html#expertise">Electronic Security</a></li>
+              <li><a href="index.html#expertise">Security Consulting</a></li>
+              <li><a href="index.html#expertise">Alarm Monitoring</a></li>
+            </ul>
+          </div>
+
+          <!-- Col 3 -->
+          <div class="footer-col">
+            <h4 class="footer-col-title">ELECTRONIC SECURITY</h4>
+            <ul class="footer-links">
+              <li><a href="index.html#expertise">CCTV Systems</a></li>
+              <li><a href="index.html#expertise">Access Control</a></li>
+              <li><a href="index.html#expertise">Alarm Systems</a></li>
+              <li><a href="index.html#expertise">Intercom Systems</a></li>
+              <li><a href="index.html#expertise">Cloud Monitoring</a></li>
+            </ul>
+          </div>
+
+          <!-- Col 4 -->
+          <div class="footer-col">
+            <h4 class="footer-col-title">INDUSTRIES</h4>
+            <ul class="footer-links">
+              <li><a href="index.html#expertise">Commercial</a></li>
+              <li><a href="index.html#expertise">Government</a></li>
+              <li><a href="index.html#expertise">Healthcare</a></li>
+              <li><a href="index.html#expertise">Retail</a></li>
+              <li><a href="index.html#expertise">Aviation</a></li>
+            </ul>
+          </div>
+
+          <!-- Col 5 -->
+          <div class="footer-col">
+            <h4 class="footer-col-title">RESOURCES</h4>
+            <ul class="footer-links">
+              <li><a href="index.html#cta">News & Insights</a></li>
+              <li><a href="our-story.html">Case Studies</a></li>
+              <li><a href="index.html#cta">Brochures</a></li>
+              <li><a href="index.html#cta">Downloads</a></li>
+              <li><a href="index.html#cta">FAQs</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom">
+        <div class="footer-bottom-left">
+          <p>© 2026 Advent Security. All Rights Reserved.</p>
+        </div>
+        <div class="footer-bottom-right">
+          <div class="footer-legal-links">
+            <a href="#">Privacy Policy</a>
+            <span class="sep">|</span>
+            <a href="#">Terms & Conditions</a>
+            <span class="sep">|</span>
+            <a href="#">Website Policy</a>
+            <span class="sep">|</span>
+            <a href="#">Sitemap</a>
+          </div>
+          <button id="back-to-top" class="back-to-top-btn" aria-label="Back to top">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M18 15l-6-6-6 6" />
+            </svg>
+          </button>
+        </div>
+      </div>
     </div>
   </footer>
 

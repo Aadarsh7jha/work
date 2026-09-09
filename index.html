@@ -14,21 +14,56 @@
   <header class="topnav" data-od-id="topnav">
     <div class="container topnav-inner">
       <a href="index.html" class="logo">
-        <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M14 2L3 8v12l11 6 11-6V8L14 2z" stroke="currentColor" stroke-width="1.5" fill="none" />
-          <path d="M14 8l-6 3.5v7L14 22l6-3.5v-7L14 8z" stroke="currentColor" stroke-width="1.2" fill="none" />
-          <circle cx="14" cy="14" r="2" fill="currentColor" />
-        </svg>
-        ADVENT SECURITY
+        <img src="logo.webp" alt="Advent Security — Excellence in Security" class="logo-img">
       </a>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="index.html" class="active">About</a>
-        <a href="#cta">Services</a>
-        <a href="our-story.html">Our Story</a>
+      <nav class="desktop-nav">
+        <div class="nav-item has-dropdown">
+          <a href="index.html" class="active">
+            About
+            <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 9l6 6 6-6" />
+            </svg>
+          </a>
+          <div class="dropdown-menu">
+            <a href="our-story.html" class="dropdown-item">Our Story</a>
+            <a href="index.html#who-we-are" class="dropdown-item">Who We Are</a>
+          </div>
+        </div>
+        <a href="our-story.html">The Advent Group</a>
+        <a href="#expertise">Security Services</a>
+        <a href="#expertise">Electronic Security</a>
+        <a href="#expertise">Industries</a>
+        <a href="#expertise">Resources</a>
         <a href="#cta">Contact</a>
       </nav>
-      <a href="#cta" class="btn-nav">Get a Quote</a>
+      <div class="topnav-actions">
+        <a href="#cta" class="btn-nav">Request a Quote</a>
+        <button class="hamburger-btn" id="hamburger-toggle" aria-label="Toggle menu">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-nav-drawer" id="mobile-drawer">
+      <div class="mobile-nav-content">
+        <nav class="mobile-nav-links">
+          <a href="index.html" class="active">About</a>
+          <a href="our-story.html" class="mobile-sublink">↳ Our Story</a>
+          <a href="our-story.html">The Advent Group</a>
+          <a href="#expertise">Security Services</a>
+          <a href="#expertise">Electronic Security</a>
+          <a href="#expertise">Industries</a>
+          <a href="#expertise">Resources</a>
+          <a href="#cta">Contact</a>
+        </nav>
+        <div class="mobile-nav-cta">
+          <a href="#cta" class="btn-nav">Request a Quote</a>
+        </div>
+      </div>
     </div>
   </header>
 
@@ -84,19 +119,48 @@
               practical security solutions designed to support day-to-day operations while helping protect people,
               property and business continuity.</p>
           </div>
-          <img src="a1.jpg" class="a1">
+          <img src="who-we-are.jpg" class="z1">
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 4 — Key Areas of Expertise -->
+    <section class="who-section expertise-stats-section" data-od-id="key-expertise">
+      <div class="container">
+        <div class="expertise-grid">
+          <!-- Image Column (Left) -->
+          <div class="expertise-image-col">
+            <img src="key-areas-of-expertise.jpg" alt="Integrated Security across every industry" class="key-image">
+          </div>
+          <!-- Content Column (Right) -->
+          <div class="expertise-content-col">
+            <p class="eyebrow">Key Areas of Expertise</p>
+            <h2 class="integrated-security-heading">Integrated security across every industry</h2>
+            <div class="expertise-stats">
+              <div class="expertise-stat" data-count="1000" data-suffix="+">
+                <div class="expertise-stat-num"><span class="counter">0</span><span class="accent">+</span></div>
+                <p class="expertise-stat-label">Security Professionals</p>
+              </div>
+              <div class="expertise-stat" data-count="500" data-suffix="+">
+                <div class="expertise-stat-num"><span class="counter">0</span><span class="accent">+</span></div>
+                <p class="expertise-stat-label">Sites Protected</p>
+              </div>
+              <div class="expertise-stat" data-count="36" data-suffix="+">
+                <div class="expertise-stat-num"><span class="counter">0</span><span class="accent">+</span></div>
+                <p class="expertise-stat-label">Years of Service</p>
+              </div>
+              <div class="expertise-stat" data-count="24" data-suffix="/7">
+                <div class="expertise-stat-num"><span class="counter">0</span><span class="accent">/7</span></div>
+                <p class="expertise-stat-label">Operations Centre</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Section 4 — Key Areas of Expertise -->
     <section class="expertise-section" data-od-id="expertise">
-      <div class="container">
-        <div class="expertise-header">
-          <p class="eyebrow" style="text-align:center;">Key Areas of Expertise</p>
-          <h2 class="expertise-heading">Integrated security across every industry</h2>
-        </div>
-      </div>
       <div class="marquee-wrapper">
         <div class="marquee-track" data-marquee>
           <span class="marquee-tag">Logistics</span>
@@ -120,7 +184,7 @@
           <span class="marquee-tag">Industrial</span>
           <span class="marquee-tag">Events</span>
         </div>
-        <div class="marquee-track duplicate" data-marquee>
+        <div class="marquee-track duplicate" data-marquee data-direction="reverse">
           <span class="marquee-tag">Logistics</span>
           <span class="marquee-tag">Corporate</span>
           <span class="marquee-tag">Healthcare</span>
@@ -141,26 +205,6 @@
           <span class="marquee-tag">Maritime</span>
           <span class="marquee-tag">Industrial</span>
           <span class="marquee-tag">Events</span>
-        </div>
-      </div>
-      <div class="container">
-        <div class="expertise-stats">
-          <div class="expertise-stat" data-count="1000" data-suffix="+">
-            <div class="expertise-stat-num"><span class="counter">0</span><span class="accent">+</span></div>
-            <p class="expertise-stat-label">Security Professionals</p>
-          </div>
-          <div class="expertise-stat" data-count="500" data-suffix="+">
-            <div class="expertise-stat-num"><span class="counter">0</span><span class="accent">+</span></div>
-            <p class="expertise-stat-label">Sites Protected</p>
-          </div>
-          <div class="expertise-stat" data-count="36" data-suffix="+">
-            <div class="expertise-stat-num"><span class="counter">0</span><span class="accent">+</span></div>
-            <p class="expertise-stat-label">Years of Service</p>
-          </div>
-          <div class="expertise-stat" data-count="24" data-suffix="/7">
-            <div class="expertise-stat-num"><span class="counter">0</span><span class="accent">/7</span></div>
-            <p class="expertise-stat-label">Operations Centre</p>
-          </div>
         </div>
       </div>
     </section>
@@ -242,13 +286,7 @@
     <!-- Section 7 — CTA -->
     <!-- Section 7 — CTA -->
     <section class="cta-section" id="cta" data-od-id="cta">
-      <div class="cta-bg">
-        <!-- Grid ke upar randomly glow/tint hone wale boxes -->
-        <div class="grid-patch patch-1"></div>
-        <div class="grid-patch patch-2"></div>
-        <div class="grid-patch patch-3"></div>
-        <div class="grid-patch patch-4"></div>
-      </div>
+      <div class="cta-bg"></div>
 
       <div class="cta-content">
         <h2 class="cta-heading">Request a Security Consultation</h2>
@@ -265,12 +303,137 @@
 
   </main>
 
-  <footer class="pagefoot" data-od-id="footer">
-    <div class="container pagefoot-inner">
-      <span>© 2026 Advent Security · All rights reserved</span>
-      <span>Integrated Security Solutions · Melbourne, Australia</span>
+  <!-- Footer (Thurro Style Layout) -->
+  <footer class="site-footer" data-od-id="footer">
+    <div class="container footer-container">
+      <div class="footer-grid">
+        <!-- Brand / Contact Column -->
+        <div class="footer-brand-col">
+          <a href="index.html" class="footer-logo-link">
+            <img src="logo.webp" alt="Advent Security" class="footer-logo-img">
+          </a>
+          <div class="footer-contact-info">
+            <p class="contact-item email"><a
+                href="mailto:contact@adventsecurity.com.au">contact@adventsecurity.com.au</a></p>
+            <p class="contact-item address">Operations Centre: 24/7 365 Days<br>Melbourne, Victoria, Australia</p>
+            <p class="contact-item phone"><a href="tel:1800464166">1800 464 166</a></p>
+          </div>
+          <div class="footer-socials">
+            <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn" class="social-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                <rect x="2" y="9" width="4" height="12" />
+                <circle cx="4" cy="4" r="2" />
+              </svg>
+            </a>
+            <a href="https://facebook.com" target="_blank" aria-label="Facebook" class="social-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+              </svg>
+            </a>
+            <a href="https://instagram.com" target="_blank" aria-label="Instagram" class="social-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Links Grid Columns -->
+        <div class="footer-nav-cols">
+          <!-- Col 1 -->
+          <div class="footer-col">
+            <h4 class="footer-col-title">THE ADVENT GROUP</h4>
+            <ul class="footer-links">
+              <li><a href="index.html">About Advent</a></li>
+              <li><a href="our-story.html">Our Businesses</a></li>
+              <li><a href="#who-we-are">Our Partners</a></li>
+              <li><a href="#cta">Careers</a></li>
+              <li><a href="our-story.html">Leadership Team</a></li>
+            </ul>
+          </div>
+
+          <!-- Col 2 -->
+          <div class="footer-col">
+            <h4 class="footer-col-title">SECURITY SERVICES</h4>
+            <ul class="footer-links">
+              <li><a href="#expertise">Security Guard</a></li>
+              <li><a href="#expertise">Corporate Concierge</a></li>
+              <li><a href="#expertise">Electronic Security</a></li>
+              <li><a href="#expertise">Security Consulting</a></li>
+              <li><a href="#expertise">Alarm Monitoring</a></li>
+            </ul>
+          </div>
+
+          <!-- Col 3 -->
+          <div class="footer-col">
+            <h4 class="footer-col-title">ELECTRONIC SECURITY</h4>
+            <ul class="footer-links">
+              <li><a href="#expertise">CCTV Systems</a></li>
+              <li><a href="#expertise">Access Control</a></li>
+              <li><a href="#expertise">Alarm Systems</a></li>
+              <li><a href="#expertise">Intercom Systems</a></li>
+              <li><a href="#expertise">Cloud Monitoring</a></li>
+            </ul>
+          </div>
+
+          <!-- Col 4 -->
+          <div class="footer-col">
+            <h4 class="footer-col-title">INDUSTRIES</h4>
+            <ul class="footer-links">
+              <li><a href="#expertise">Commercial</a></li>
+              <li><a href="#expertise">Government</a></li>
+              <li><a href="#expertise">Healthcare</a></li>
+              <li><a href="#expertise">Retail</a></li>
+              <li><a href="#expertise">Aviation</a></li>
+            </ul>
+          </div>
+
+          <!-- Col 5 -->
+          <div class="footer-col">
+            <h4 class="footer-col-title">RESOURCES</h4>
+            <ul class="footer-links">
+              <li><a href="#cta">News & Insights</a></li>
+              <li><a href="our-story.html">Case Studies</a></li>
+              <li><a href="#cta">Brochures</a></li>
+              <li><a href="#cta">Downloads</a></li>
+              <li><a href="#cta">FAQs</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom Bar -->
+      <div class="footer-bottom">
+        <div class="footer-bottom-left">
+          <p>© 2026 Advent Security. All Rights Reserved.</p>
+        </div>
+        <div class="footer-bottom-right">
+          <div class="footer-legal-links">
+            <a href="#">Privacy Policy</a>
+            <span class="sep">|</span>
+            <a href="#">Terms & Conditions</a>
+            <span class="sep">|</span>
+            <a href="#">Website Policy</a>
+            <span class="sep">|</span>
+            <a href="#">Sitemap</a>
+          </div>
+          <button id="back-to-top" class="back-to-top-btn" aria-label="Back to top">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M18 15l-6-6-6 6" />
+            </svg>
+          </button>
+        </div>
+      </div>
     </div>
   </footer>
+
 
   <!-- Libraries -->
   <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.26/dist/lenis.css">
